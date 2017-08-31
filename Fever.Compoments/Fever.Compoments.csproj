@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E15C5F9C-8765-4498-9C57-90E39E8347DF}</ProjectGuid>
+    <ProjectGuid>{7DE2D687-512C-4780-A39F-03DAA3D81539}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Fever.Core</RootNamespace>
-    <AssemblyName>Fever.Core</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <RootNamespace>Fever.Compoments</RootNamespace>
+    <AssemblyName>Fever.Compoments</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,7 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,8 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AdminPlatDbContext.cs" />
+    <Compile Include="Migrations\201708311346334_add_MenuItem_CommandAction_userInfo_Role.cs" />
+    <Compile Include="Migrations\201708311346334_add_MenuItem_CommandAction_userInfo_Role.Designer.cs">
+      <DependentUpon>201708311346334_add_MenuItem_CommandAction_userInfo_Role.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708311350580_Remove_many_foreignKey.cs" />
+    <Compile Include="Migrations\201708311350580_Remove_many_foreignKey.Designer.cs">
+      <DependentUpon>201708311350580_Remove_many_foreignKey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fever.Model\Fever.Model.csproj">
+      <Project>{7EAAF6A1-1C3C-4AC3-9EE9-D4C3203FFE89}</Project>
+      <Name>Fever.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708311346334_add_MenuItem_CommandAction_userInfo_Role.resx">
+      <DependentUpon>201708311346334_add_MenuItem_CommandAction_userInfo_Role.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708311350580_Remove_many_foreignKey.resx">
+      <DependentUpon>201708311350580_Remove_many_foreignKey.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
