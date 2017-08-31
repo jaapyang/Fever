@@ -40,7 +40,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AppService\IInputDto.cs" />
+    <Compile Include="AppService\InputDtoBase.cs" />
+    <Compile Include="AppService\IOutputDto.cs" />
+    <Compile Include="AppService\IPagedDto.cs" />
+    <Compile Include="AppService\IRequestHandler.cs" />
+    <Compile Include="AppService\OutputDtoBase.cs" />
+    <Compile Include="AppService\PagedInputDto.cs" />
+    <Compile Include="AppService\PagedOutputDto.cs" />
+    <Compile Include="AppService\ReqeustHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
