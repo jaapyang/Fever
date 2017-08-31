@@ -6,10 +6,6 @@ namespace Fever.Model
 {
     public class CommandActionInfoModel : ModelBase
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CommandActionId { get; set; }
-
         [StringLength(50)]
         public string ActionName { get; set; }
 

@@ -31,7 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\packages\Castle.Windsor.3.3.0\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,7 +56,22 @@
     <Compile Include="AppService\PagedInputDto.cs" />
     <Compile Include="AppService\PagedOutputDto.cs" />
     <Compile Include="AppService\ReqeustHandler.cs" />
+    <Compile Include="Dependency\IocManager.cs" />
+    <Compile Include="Entities\EntityBase.cs" />
+    <Compile Include="Entities\ICreateBy.cs" />
+    <Compile Include="Entities\ICreateTime.cs" />
+    <Compile Include="Entities\IEntity.cs" />
+    <Compile Include="Entities\IEntityOfPrimaryKey.cs" />
+    <Compile Include="Entities\IIsSoftDelete.cs" />
+    <Compile Include="Entities\IRecordState.cs" />
+    <Compile Include="Entities\IUpdateBy.cs" />
+    <Compile Include="Entities\IUpdateTime.cs" />
+    <Compile Include="Entities\State.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IRepositoryOfTEntityAndPrimaryKey.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

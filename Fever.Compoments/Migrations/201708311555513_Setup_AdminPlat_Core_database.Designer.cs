@@ -7,13 +7,13 @@ namespace Fever.Compoments.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class add_MenuItem_CommandAction_userInfo_Role : IMigrationMetadata
+    public sealed partial class Setup_AdminPlat_Core_database : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(add_MenuItem_CommandAction_userInfo_Role));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Setup_AdminPlat_Core_database));
         
         string IMigrationMetadata.Id
         {
-            get { return "201708311346334_add_MenuItem_CommandAction_userInfo_Role"; }
+            get { return "201708311555513_Setup_AdminPlat_Core_database"; }
         }
         
         string IMigrationMetadata.Source

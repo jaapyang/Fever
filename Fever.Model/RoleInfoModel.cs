@@ -6,10 +6,6 @@ namespace Fever.Model
 {
     public class RoleInfoModel : ModelBase
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int RoleId { get; set; }
-
         [StringLength(50)]
         public string RoleName { get; set; }
 

@@ -12,7 +12,7 @@ namespace Fever.Core.Repository
     }
 
     public interface IRepository<TEntity, TPrimaryKey> : IRepository
-        where TEntity : class ,IEntityOfPrimaryKey
+        where TEntity : class ,IEntity
     {
         #region Query/Get/Select
 

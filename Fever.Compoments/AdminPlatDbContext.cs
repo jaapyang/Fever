@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using Fever.Core.Entities;
 using Fever.Model;
 
 namespace Fever.Compoments
@@ -10,7 +11,7 @@ namespace Fever.Compoments
         {
             
         }
-
+        
         public DbSet<UserInfoModel> UserInfoModels { get; set; }
         public DbSet<RoleInfoModel> RoleInfoModels { get; set; }
         public DbSet<MenuItemInfoModel> MenuItemInfoModels { get; set; }
