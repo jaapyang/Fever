@@ -8,5 +8,7 @@ namespace Fever.Core.Uow
 {
     public interface IUnitOfWork
     {
+        void Commit();
+        void Rollback();
     }
 }
