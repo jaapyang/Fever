@@ -70,6 +70,7 @@
     <Compile Include="Entities\IUpdateTime.cs" />
     <Compile Include="Entities\State.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DbContext\IDbContext.cs" />
     <Compile Include="Repository\IRepositoryOfTEntityAndPrimaryKey.cs" />
     <Compile Include="Uow\IUnitOfWork.cs" />
   </ItemGroup>
